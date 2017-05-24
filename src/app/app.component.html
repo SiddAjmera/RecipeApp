@@ -1,10 +1,10 @@
-<app-header></app-header>
+<app-header (viewClicked)="changeView($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <!--<app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>-->
-      <app-game-control (gameStarted)=onGameStart($event)></app-game-control>
+      <app-recipes *ngIf="currentView === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="currentView === 'shopping'"></app-shopping-list>
+      <!--<app-game-control (gameStarted)=onGameStart($event)></app-game-control>-->
     </div>
   </div>
 </div>

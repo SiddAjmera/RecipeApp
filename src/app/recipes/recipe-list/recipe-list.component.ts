@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -8,14 +8,20 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeListComponent implements OnInit {
 
+  @Output() onRecipeSelect: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+
   recipes: Recipe[] = [
-    new Recipe('Test', 'A Test', 'http://www.seriouseats.com/recipes/assets_c/2016/05/20160503-fava-carrot-ricotta-salad-recipe-1-thumb-1500xauto-431710.jpg')
+    new Recipe('Naan', 'This recipe makes the best naan I have tasted outside of an Indian restaurant. I can\'t make enough of it for my family. I serve it with shish kabobs, but I think they would eat it plain.', 'http://images.media-allrecipes.com/userphotos/250x250/115386.jpg'),
+    new Recipe('Indian-Influenced Zucchini Onion Pepper Latkes', 'Thanks to the inspiration from two other AllRecipes recipes, I concocted this and it was a winner. It wasn\'t really spicy at all and the kids loved it. Excellent served with a dollop of sour cream.', 'http://images.media-allrecipes.com/userphotos/560x315/4391060.jpg')
   ];
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.recipes);
+  }
+
+  recipeClicked(recipe: Recipe){
+    this.onRecipeSelect.emit(recipe);
   }
 
 }

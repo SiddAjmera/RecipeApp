@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-
+  currentView: string = 'recipes';
   onGameStart($event){
     console.log('Event Object: ', $event);
+  }
+
+  changeView(viewName){
+    this.currentView = viewName;
   }
 }
