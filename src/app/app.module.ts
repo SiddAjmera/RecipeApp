@@ -1,3 +1,5 @@
+import { CounterService } from './shared/services/counter/counter.service';
+import { UsersService } from './shared/services/users/users.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +20,8 @@ import { BasicHighlightDirective } from "./directives/basic-highlight/basic-high
 import { BetterHighlightDirective } from "./directives/better-highlight/better-highlight.directive";
 import { UnlessDirective } from './directives/unless/unless.directive';
 import { DropdownDirective } from './shared/dropdown/dropdown.directive';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +39,16 @@ import { DropdownDirective } from './shared/dropdown/dropdown.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UsersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
