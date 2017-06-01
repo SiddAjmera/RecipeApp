@@ -1,9 +1,11 @@
+import { AppRoutingModule } from './app-routing.module';
 import { CounterService } from './shared/services/counter/counter.service';
 import { UsersService } from './shared/services/users/users.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +24,8 @@ import { UnlessDirective } from './directives/unless/unless.directive';
 import { DropdownDirective } from './shared/dropdown/dropdown.directive';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { DefaultViewComponent } from './default-view/default-view.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +45,15 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
     UnlessDirective,
     DropdownDirective,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    DefaultViewComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [UsersService, CounterService],
   bootstrap: [AppComponent]

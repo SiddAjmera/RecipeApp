@@ -1,9 +1,12 @@
-<app-header (viewClicked)="changeView($event)"></app-header>
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <app-recipes *ngIf="currentView === 'recipes'"></app-recipes>
-      <app-shopping-list *ngIf="currentView === 'shopping'"></app-shopping-list>
+
+      <router-outlet></router-outlet>
+      
+      <!--<app-recipes *ngIf="currentView === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="currentView === 'shopping'"></app-shopping-list>-->
       <!--<app-game-control (gameStarted)=onGameStart($event)></app-game-control>-->
       <!--<p appBasicHighlight>Style me with basic directive!</p>
       <p appBetterHighlight [defaultColor]="'orange'" [highlightColor]="'yellow'">Style me with basic directive!</p>
