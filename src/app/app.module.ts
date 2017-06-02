@@ -3,7 +3,7 @@ import { CounterService } from './shared/services/counter/counter.service';
 import { UsersService } from './shared/services/users/users.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -26,6 +26,7 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { DefaultViewComponent } from './default-view/default-view.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +48,12 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     ActiveUsersComponent,
     InactiveUsersComponent,
     DefaultViewComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    ProjectFormComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
