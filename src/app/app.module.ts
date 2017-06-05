@@ -26,6 +26,7 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { DefaultViewComponent } from './default-view/default-view.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     ActiveUsersComponent,
     InactiveUsersComponent,
     DefaultViewComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

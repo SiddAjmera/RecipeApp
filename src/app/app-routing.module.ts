@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { UserFormComponent } from './user-form/user-form.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
         ]
     },
     { path: 'shopping-list', component: ShoppingListComponent },
+    { path: 'user-form', component: UserFormComponent },
     { path: '', redirectTo: '/recipes', pathMatch: 'full' }
 ];
 
