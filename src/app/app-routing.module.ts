@@ -1,11 +1,13 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { ProjectFormComponent } from './project-form/project-form.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { DefaultViewComponent } from './default-view/default-view.component';
-import { NgModule } from '@angular/core';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
     {
@@ -18,6 +20,7 @@ const appRoutes: Routes = [
     },
     { path: 'shopping-list', component: ShoppingListComponent },
     { path: 'user-form', component: UserFormComponent },
+    { path: 'project-form', component: ProjectFormComponent },
     { path: '', redirectTo: '/recipes', pathMatch: 'full' }
 ];
 
@@ -30,6 +33,4 @@ const appRoutes: Routes = [
     ]
 })
 
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule { }
