@@ -28,6 +28,9 @@ import { DefaultViewComponent } from './default-view/default-view.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
+import { ReversePipe } from './pipes/reverse/reverse.pipe';
+import { ServerListComponent } from './server-list/server-list.component';
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { ProjectFormComponent } from './project-form/project-form.component';
     DefaultViewComponent,
     RecipeEditComponent,
     ProjectFormComponent,
-    UserFormComponent
+    UserFormComponent,
+    ReversePipe,
+    ServerListComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

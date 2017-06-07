@@ -8,6 +8,7 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { ServerListComponent } from './server-list/server-list.component';
 
 const appRoutes: Routes = [
     {
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     { path: 'shopping-list', component: ShoppingListComponent },
     { path: 'user-form', component: UserFormComponent },
     { path: 'project-form', component: ProjectFormComponent },
+    { path: 'server-list', component: ServerListComponent },
     { path: '', redirectTo: '/recipes', pathMatch: 'full' }
 ];
 
