@@ -32,6 +32,8 @@ import { ReversePipe } from './pipes/reverse/reverse.pipe';
 import { ServerListComponent } from './server-list/server-list.component';
 import { SortPipe } from './pipes/sort/sort.pipe';
 
+import { ServersService } from './services/servers/servers.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +68,7 @@ import { SortPipe } from './pipes/sort/sort.pipe';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, CounterService],
+  providers: [UsersService, CounterService, ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

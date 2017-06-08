@@ -1,4 +1,7 @@
 <div class="container">
+  <button (click)="addServer()"
+          class="btn btn-primary">Add Server</button>
+  <hr>
   <ul class="list-group">
     <li class="list-group-item"
         *ngFor="let server of servers | sort" 
